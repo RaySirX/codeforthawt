@@ -4,7 +4,6 @@
 # highestFreqChar2 - take advantage of collections.Counter char frequency counter
 # for testing, assert both functions should return same result
 
-from collections import Counter
 from collections import defaultdict
 
 def highestFreqChar1(s):
