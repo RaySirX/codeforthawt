@@ -45,6 +45,13 @@ def highestFreqChar2(s):
   # added guard for edge case where input is "" 
   return sortedCharFreqList[0][0] if sortedCharFreqList else ""
 
+
+def highestFreqChar3(s):
+  # Full marks!!
+
+  return max(set(s), key=lambda c:str.count(c))
+
+
 if __name__ == "__main__":
   #
   # white-box testing sort function used so include test case of unsorted strings
@@ -72,3 +79,14 @@ if __name__ == "__main__":
   assert highestFreqChar1("aaabb") == highestFreqChar2("aaabb"), highestFreqChar2("aaabb")
   assert highestFreqChar1("") == highestFreqChar2(""), highestFreqChar2("")
   assert highestFreqChar1(None) == highestFreqChar2(None), highestFreqChar2(None)
+
+  assert highestFreqChar1("baabbbaaaaaab") == highestFreqChar2("baabbbaaaaaab"), highestFreqChar3("baabbbaaaaaab")
+  assert highestFreqChar1("bbbaaaa") == highestFreqChar2("bbbaaaa"), highestFreqChar3("bbbaaaa")
+  assert highestFreqChar1("bbbaa") ==  highestFreqChar2("bbbaa"), highestFreqChar3("bbbaa")
+  assert highestFreqChar1("bbbaaa") == highestFreqChar2("bbbaaa"), highestFreqChar3("bbbaaa")
+  assert highestFreqChar1("aaabbb") == highestFreqChar2("aaabbb"), highestFreqChar3("aaabbb")
+  assert highestFreqChar1("aaabbbb") == highestFreqChar2("aaabbbb"), highestFreqChar3("aaabbbb")
+  assert highestFreqChar1("aaabb") == highestFreqChar2("aaabb"), highestFreqChar3("aaabb")
+  assert highestFreqChar1("") == highestFreqChar2(""), highestFreqChar3("")
+  assert highestFreqChar1(None) == highestFreqChar2(None), highestFreqChar3(None)
+
